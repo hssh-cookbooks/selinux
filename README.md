@@ -1,1 +1,4 @@
-# cookbooks.selinux
+# selinux
+
+TODO: Enter the cookbook description here.
+

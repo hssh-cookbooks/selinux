@@ -1,0 +1,8 @@
+name             'selinux'
+maintainer       'Hisashi KOMINE'
+maintainer_email 'hssh@hssh.jp'
+license          'mit'
+description      'Installs/Configures selinux'
+long_description 'Installs/Configures selinux'
+version          '0.1.0'
+supports         'centos'
