@@ -26,7 +26,7 @@
 
 action :set do
   t = template '/etc/selinux/config' do
-    cookbook new_resource.cookbook_name.to_s
+    cookbook 'selinux'
     source 'selinux.config.erb'
     variables(
         selinux: new_resource.state,
