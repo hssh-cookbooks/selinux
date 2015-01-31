@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: selinux
-# Recipe:: default
+# Recipe:: disabled
 #
 # The MIT License (MIT)
 # 
@@ -24,15 +24,5 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-# Configure SELinux
-template '/etc/selinux/config' do
-  source 'selinux.config.erb'
-  variables config: node['selinux']['config']
-  notifies :run, 'execute[setenforce]', :immediately
-end
-
-execute 'setenforce' do
-  mode = node['selinux']['config']['SELINUX']
-  command "setenforce #{mode == 'disabled' ? 0 : mode}"
-  action :nothing
+selinux 'disabled' do
 end

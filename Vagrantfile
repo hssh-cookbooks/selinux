@@ -73,6 +73,6 @@ Vagrant.configure(2) do |config|
 
   # Enable provisioning with chef_zero provisioner.
   config.vm.provision :chef_zero do |chef|
-    chef.add_recipe 'selinux::default'
+    chef.add_recipe 'selinux::disabled'
   end
 end
