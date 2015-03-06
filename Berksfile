@@ -1,3 +1,3 @@
-source "https://supermarket.getchef.com"
+source "https://berkshelf-api-hssh.herokuapp.com"
 
 metadata
